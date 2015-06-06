@@ -33,6 +33,6 @@ A lightweight, easy to use datepicker calendar, without any external dependencie
 		  default is true, acceptable values: true | false.
 	    
 	    
-	     (for more see <b>calendar/index.html</b>)
+	     (for more see calendar/index.html)
 
 # Any feedback/contribution will be appreciated.
