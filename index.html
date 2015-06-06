@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8"> <![endif]-->
+<!--[if gte IE 9]><!--> <html class="msie"> <!--<![endif]-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Goibibo.com | Global Calendar</title>
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <!-- Globally available elements - common base CSS File -->
+        <link type="text/css" rel="stylesheet" href="css/combinedStyles.css">
+        <link rel="stylesheet" type="text/css" href="css/calendar.css" />
+        <!-- Page specific elements - style CSS File -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+        <script type="text/javascript" src="js/calendar.js"></script>
+        <script type="text/javascript">
+            start_datepicker = calen({
+                dp_id_name: 'start-calen',      // selector id where to display the datepicker
+                id_name: 'start-date',                 // selector id where to populate a selected date
+                max_date: '1Y',
+                min_date: '0',
+                display_count: 2,
+                // type_of_calen: 'dob(child:12)',
+                onDateSelected: function() { DatePicked('start-date',end_datepicker); }
+            });
+
+            end_datepicker = calen({
+                dp_id_name: 'end-calen',        // selector id where to display the datepicker
+                id_name: 'end-date',                   // selector id where to populate a selected date
+                max_date: '1Y',
+                min_date: '0',
+                display_count: 2,
+                onDateSelected: function() { DatePicked('end-date'); }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8 pad20">
+                    <div id="jrs_calendar_form">
+                        <input type="hidden" name="sDay" id="sDay" value="dd" />
+                        <input type="hidden" name="sMonth" id="sMonth" value="mm" />
+                        <input type="hidden" name="sYear" id="sYear" value="yy" />
+                
+                        <!-- From Date -->
+                        <div id="jrs_arrival_input">
+                            <div class="jrs_form_text">From:</div>
+                            <span class="jrdp_calendar_pos" id="start-calen"></span>
+                            <input type="text" name="start-date" id="start-date" class="date-pick" readonly="readonly" value="mm/dd/yy" data-date onclick="start_datepicker.show();" />
+                            <img class="ui-datepicker-trigger" src="images/calendar.png" height="50" width="50" onclick="start_datepicker.show();" alt="" />
+                        </div>
+                        <!-- To Date -->
+                        <div id="jrs_departure_input">
+                            <div class="jrs_form_text">To:</div>
+                            <span class="jrdp_calendar_pos" id="end-calen"></span>
+                            <input type="text" name="end-date" id="end-date" class="date-pick" readonly="readonly" value="mm/dd/yy" data-date onclick="end_datepicker.show();" />
+                            <img class="ui-datepicker-trigger" src="images/calendar.png" height="50" width="50" onclick="end_datepicker.show();" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,355 @@
+body{ font-weight: 300; }
+.jrdp_calendar_pos {
+  position: absolute;
+  display: inline-block;
+  z-index: 9;
+  background: #fff;
+  box-shadow: 0 1px 5px #ccc;
+  border-radius: 10px;
+  border: solid 1px #ccc;
+}
+.jrdp_encapsulated_table {
+  /* all datepickers are encapsulated within this class */
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;/*   border: 1px solid #c3c3c3;*/
+}
+.jrdp_calendar_box{vertical-align: top; }
+.jrdp_calendar_box:first-child{ border-right: solid 1px #ccc; }
+.jrdp_calendar_box:last-child{ border-left: solid 1px #eee; }
+.date-pick {
+	border: none;
+	color: blue;
+	font-size: 17px;
+	font-weight:bold;
+	height: 18px;
+	padding: 3px 2px 1px;
+	width: 100px;
+}
+
+#jrs_booking_header {
+	float: none;
+	overflow: hidden;
+	width: 167px !important;
+}
+.jrs_form_text {
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.jrs_clr {
+	clear: both;
+}
+#jrs_arrival_input {
+	padding: 0 0 1px !important;
+	float: left;
+	margin: 12px 10px 0px 0px;
+}
+#jrs_departure_input {
+	padding: 0 0 1px !important;
+	float: left;
+	margin: 12px 0px 0px -10px;
+}
+#jrs_lodging_select_div {
+	padding: 0 0 2px !important;
+	margin: 12px 15px 0px 103px;
+	float: left;
+}
+#jrs_location_dropdown_div {
+	float: none;
+	padding: 0 0 2px 110px !important;
+}
+.ui-datepicker {
+	z-index: 1000;
+}
+.ui-datepicker-trigger {
+	border: medium none !important;
+	display: inline !important;
+	margin: 0 !important;
+	left: -19px;
+	position: relative;
+	top: 3px;
+	vertical-align: top;
+	cursor: pointer;
+}
+.jrs_form_select_item {
+	width: 175px !important;
+	margin-top: 1px;
+	color: #5c371a;
+	font-size: 11px !important;
+}
+#jrs_search_submit {
+	float: right;
+	margin: 16px 15px 0px 0px;
+}
+
+
+
+.jrdp_calendar_tbar {
+	/* top title bar */
+    background-color: #d94867;
+}
+.jrdp_calendar_close_btn {
+/* close button displayed in top title bar (not used if close_onselect option is false) */
+
+  /*  background-color: d94867;  /*#343434; 
+    width: 1px;
+    height: 1px;
+    display: inline;
+    position:absolute;
+    color: #ffffff;
+    float: right; 
+
+    width: 24px;
+    height: 23px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    top: -12px;
+    right: -12px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1px;
+*/
+}
+#jrdp_calendar_table_inner {
+	/* The table that uses this will eventually be taken out as it serves no */
+    /* purpose (it was used for the close button but that has been removed). */
+    display: none;
+}
+.jrdp_calendar_month_tbar {
+}
+.jrdp_calendar_month {
+	/* style for month name */
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bolder;
+	color: #343434;
+	text-decoration: none;
+	text-align: center;
+}
+.jrdp_calendar_month_prev {
+	/* style for the previous button */
+	font-size: 28px;
+	font-style: normal;
+	font-weight: bold;
+	color: #343434;
+	text-decoration: none;
+	cursor: pointer;
+	/*padding: 4px 7px 4px 12px; */
+    text-align: center;
+	display: block;
+}
+.jrdp_calendar_month_next {
+	/* style for the next button */
+	font-size: 28px;
+	font-style: normal;
+	font-weight: bold;
+	color: #343434;
+	text-decoration: none;
+	cursor: pointer;
+	/*padding: 4px 12px 4px 7px; */
+    text-align: center;
+	display: block;
+}
+.jrdp_calendar_month_prev:hover {/* background-color: #c3c3c3;*/
+}
+.jrdp_calendar_month_next:hover {/* background-color: #c3c3c3;*/
+}
+
+.jrdp_calendar_day2 {
+	/* style for an empty cell */
+	font-size: 5px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	/* background-color: #ffffff;
+    height: 10px;*/
+    width: 20px;
+	text-align: center;
+}
+.jrdp_calendar_icon {
+	/* style for a datepicker icon; used in html and is thus optional */
+    cursor: pointer;
+	border-width: 0px;
+	height: 13px;
+	width: 13px;
+}
+/* ----------------------------------- */
+/* Styles for a multiple month display */
+/* ----------------------------------- */
+
+.jrdp_calendar,
+.jrdp_calendar_multi {
+	width: 320px;
+	height:315px;
+	margin: 10px;
+	padding: 0;
+}
+.jrdp_calendar_pos_multi {
+	position: absolute;
+	display: inline-block;
+	z-index: 9999;
+}
+.jrdp_calendar_tbar_multi {
+	background-color: #d94867;
+}
+.jrdp_calendar_close_btn_multi {
+}
+.jrdp_calendar_close_btn_multi:hover {
+}
+.jrdp_calendar_month_tbar_multi {
+}
+#jrdp_calendar_table_inner_multi {
+	display: none;
+}
+.jrdp_calendar_month_multi {
+	font-size: 15px;
+	font-weight: bold;
+	color: #343434;
+	text-decoration: none;
+	text-align: center;
+  vertical-align: middle;
+}
+.jrdp_calendar_month_prev_multi {
+	font-size: 28px;
+
+	font-style: normal;
+	font-weight: bold;
+	color: #343434;
+	text-decoration: none;
+	cursor: pointer;
+	/*padding: 4px 7px 4px 12px; */
+    text-align: center;
+	display: block;
+}
+.jrdp_calendar_month_next_multi {
+	font-size: 28px;
+	font-style: normal;
+	font-weight: bold;
+	color: #343434;
+	text-decoration: none;
+	cursor: pointer;
+	/*padding: 4px 12px 4px 7px; */
+    text-align: center;
+	display: block;
+}
+.jrdp_calendar_month_prev_multi:hover {
+}
+.jrdp_calendar_month_next_multi:hover {
+}
+.jrdp_calendar_days,
+.jrdp_calendar_days_multi {
+	font-size: 11px;
+  width: 20px;
+	height: 21px;
+	text-align: center;
+	vertical-align: middle;
+  color: #666;
+  padding: 15px 0;
+}
+
+
+.jrdp_calendar_day1 .calDate,
+.jrdp_calendar_day1_noselect .calDate,
+.jrdp_calendar_current_day .calDate,
+.jrdp_calendar_day1_multi .calDate,
+.jrdp_calendar_day1_noselect_multi .calDate,
+.jrdp_calendar_current_day_multi .calDate {
+	font-size: 14px;
+  font-weight: normal;
+  color: #666666;
+  text-decoration: none;
+  padding: 8px 10px;
+  text-align: center;
+  line-height: 20px;
+  margin: 4px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  cursor: pointer;
+  border: solid 1px #fff;
+}
+
+.jrdp_calendar_day1 .calDate:hover,
+.jrdp_calendar_day1_multi .calDate:hover {
+  background: #3366cc;
+  color: #fff;
+  cursor: pointer;
+}
+.jrdp_calendar_day1_noselect .calDate,
+.jrdp_calendar_day1_noselect_multi .calDate{
+	color: #C1C1C1;
+	cursor:not-allowed;
+}
+
+.jrdp_calendar_current_day .calDate,
+.jrdp_calendar_current_day_multi .calDate{
+  border: solid 1px #36c;
+}
+
+.jrdp_calendar_current_day .calDate:hover,
+.jrdp_calendar_current_day_multi .calDate:hover {
+  background-color: #36c;
+  color: #fff;
+}
+
+
+.jrdp_calendar_day2_multi {
+	font-size: 5px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	/* background-color: #ffffff;
+    height: 10px;*/
+    width: 20px;
+	text-align: center;
+}
+.jrdp_calendar_icon_multi {
+	cursor: pointer;
+	border-width: 0px;
+	height: 13px;
+	width: 13px;
+}
+span#jrdp_end-calen_nextmonth_multi_0 {
+	display:none;
+}
+span#jrdp_end-calen_prevmonth_multi_1 {
+	display:none;
+}
+span#jrdp_start-calen_nextmonth_multi_0{
+	display:none;
+}
+span#jrdp_start-calen_prevmonth_multi_1{
+	display:none;
+}
+.currentDate{
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+.currentDate:hover .showToday{ 
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -webkit-transform:rotate(360deg);
+  transform:rotate(360deg); 
+}
+.showToday{
+  float: right;
+  font-size: 8px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border: solid 1px #36c;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  padding-top: 9px;
+  top: -6px;
+  right: 0;
+}
+.jrdp_calendar_box:last-child .currentDate{ display: none;}
+
